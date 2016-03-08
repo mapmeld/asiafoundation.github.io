@@ -17,10 +17,6 @@ var svg = d3.select("#mapper").append("svg")
 
 var gjsrc = "/js/countries.geo.json";
 
-if (window.location.hostname.indexOf('github') === -1) {
-  gjsrc = 'asiafoundation.github.io' + gjsrc;
-}
-
 var textFor = {
   'Afghanistan': [{
     title: 'Visualizing Afghanistan',

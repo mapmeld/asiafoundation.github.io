@@ -68,7 +68,7 @@ var textFor = {
     title: 'Ulaanbaatar and OpenStreetMap',
     summary: 'Promoting community mapping and citizen engagement via OpenStreetMap'
   }],
-  'Myammar': [{
+  'Myanmar': [{
     title: 'Open Election Data and Mobile App',
     summary: 'Supporting an election data hackathon, candidate database, and the creation of voter information mobile apps'
   },{
@@ -92,35 +92,42 @@ var textFor = {
   }]
 }
 
-d3.json(gjsrc, function(error, countries) {
-  if (error) {
-    throw error;
-  }
+if ($(window).width() > 700) {
+  d3.json(gjsrc, function(error, countries) {
+    if (error) {
+      throw error;
+    }
 
-  svg.selectAll("svg")
-    .data(countries.features)
-    .enter()
-    .append("path")
-    .attr("class", function(d) {
-      return "country";
-    })
-    .attr("d", path)
-    .on('mousemove', function(d) {
-      var mouse = d3.mouse(svg.node()).map(function(d) {
-        return parseInt(d);
+    svg.selectAll("svg")
+      .data(countries.features)
+      .enter()
+      .append("path")
+      .attr("class", function(d) {
+        return "country";
+      })
+      .attr("d", path)
+      .on('mousemove', function(d) {
+        if (!textFor[d.properties.name]) {
+          return;
+        }
+        var mouse = d3.mouse(svg.node()).map(function(d) {
+          return parseInt(d);
+        });
+        var proj = textFor[d.properties.name] || [];
+        var projtxt = '';
+        for (var p = 0; p < proj.length; p++) {
+          projtxt += '<p><strong>' + proj[p].title + '</strong><br/>' + proj[p].summary + '</p>';
+        }
+
+        tooltip.classed('hidden', false)
+          .attr('style', 'left:' + (mouse[0] + 15) +
+                'px; top:' + (mouse[1] - 35) + 'px')
+          .html(d.properties.name + projtxt);
+      })
+      .on('mouseout', function() {
+        tooltip.classed('hidden', true);
       });
-      var proj = textFor[d.properties.name] || [];
-      var projtxt = '';
-      for (var p = 0; p < proj.length; p++) {
-        projtxt += '<p><strong>' + proj[p].title + '</strong><br/>' + proj[p].summary + '</p>';
-      }
-
-      tooltip.classed('hidden', false)
-        .attr('style', 'left:' + (mouse[0] + 15) +
-              'px; top:' + (mouse[1] - 35) + 'px')
-        .html(d.properties.name + projtxt);
-    })
-    .on('mouseout', function() {
-      tooltip.classed('hidden', true);
-    });
-});
+  });
+} else {
+  $("#map").remove();
+}

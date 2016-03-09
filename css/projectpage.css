@@ -1,0 +1,74 @@
+body {
+  font-family: 'Helvetica';
+  background-color: #000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.img-list {
+  text-align: center;
+  margin-top: 30px;
+  width: 33%;
+  float: left;
+}
+
+.img-list img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 22px auto;
+}
+
+.content {
+  background: #fff;
+  padding: 15px 20px 40px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: #444 -2px 2px 2px;
+}
+
+.content > .written {
+  text-align: left;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  color: #644;
+  width: 63%;
+  float: left;
+}
+
+.project-title > h1 {
+  font-size: 3em;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 2em;
+  font-weight: normal;
+  color: #888;
+  margin-bottom: 1em;
+}
+
+.circular {
+  display: block;
+  color: #fff;
+  background: #2bb;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+}
+
+.circular .arrow {
+  position: relative;
+  font-size: 6em;
+  bottom: 0.45em;
+}

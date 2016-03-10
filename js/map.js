@@ -1,4 +1,4 @@
-var width = 1000, height = 600;
+var width = "100%", height = "100%";
 
 var projection = d3.geo.mercator()
   .scale(400)
@@ -12,8 +12,10 @@ var tooltip = d3.select('#mapper').append('div')
   .attr('class', 'hidden tooltip');
 
 var svg = d3.select("#mapper").append("svg")
-  .attr("width", width)
-  .attr("height", height);
+  //.attr("width", width)
+  //.attr("height", height)
+  .attr('viewBox','0 0 1300 550')
+  .attr('preserveAspectRatio',"none");
 
 var gjsrc = "/js/countries.geo.json";
 

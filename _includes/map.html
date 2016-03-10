@@ -1,16 +1,15 @@
 <style type="text/css">
-  .map {
-    text-align: center;
-  }
+
 
   svg {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #8ccbf7;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .country {
-    fill: #fff;
+    fill: #CCC;
     stroke: #aaa;
     stroke-width: 1.5px;
   }
@@ -20,7 +19,12 @@
   }
 
   #mapper {
-    margin-left: -240px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 45%; 
+    vertical-align: middle; 
+    overflow: hidden; 
   }
 
   .tooltip {
@@ -30,7 +34,7 @@
     border-radius: 8px;
     opacity: 0.9;
     float: left;
-    position: relative;
+    position: absolute;
     width: 240px;
   }
 

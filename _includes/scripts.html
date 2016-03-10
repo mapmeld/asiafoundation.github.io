@@ -5,12 +5,12 @@
 $(function() {
   function adjustImages() {
     if ($(window).width() > 900) {
-      $(".content-section-a").each(function(i, el) {
-        $(el).find(".right").height( $(el).find(".left .lead").height() + 60 );
+      var maxHeight = 0;
+      $(".content-section-a .left, .content-section-b .right").each(function(i, el) {
+        maxHeight = Math.max(maxHeight, $(el).height());
       });
-      $(".content-section-b").each(function(i, el) {
-        $(el).find(".left").height( $(el).find(".right .lead").height() + 60 );
-      });
+      maxHeight += 30;
+      $(".content-section-b .left, .content-section-a .right").height(maxHeight);
     } else {
       $(".content-section-a .right, .content-section-b .left").height(400);
     }

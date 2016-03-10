@@ -2,7 +2,7 @@ var width = "100%", height = "100%";
 
 var projection = d3.geo.mercator()
   .scale(400)
-  .translate([-200, 450])
+  .translate([-150, 450])
   .precision(0.0001);
 
 var path = d3.geo.path()
@@ -14,7 +14,7 @@ var tooltip = d3.select('#mapper').append('div')
 var svg = d3.select("#mapper").append("svg")
   //.attr("width", width)
   //.attr("height", height)
-  .attr('viewBox','0 0 1300 550')
+  .attr('viewBox','0 0 1200 550')
   .attr('preserveAspectRatio',"none");
 
 var gjsrc = "/js/countries.geo.json";
@@ -118,8 +118,8 @@ if ($(window).width() > 700) {
         }
 
         tooltip.classed('hidden', false)
-          .attr('style', 'left:' + (mouse[0] + 15) +
-                'px; top:' + (mouse[1] - 35) + 'px')
+          .attr('style', 'left:' + (mouse[0] - 200) +
+                'px; top:' + (svg.node().offsetTop + mouse[1] - 35) + 'px')
           .html(d.properties.name + projtxt);
       })
       .on('mouseout', function() {

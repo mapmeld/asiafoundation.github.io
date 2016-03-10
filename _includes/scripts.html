@@ -1,6 +1,25 @@
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
+<script>
+$(function() {
+  function adjustImages() {
+    if ($(window).width() > 900) {
+      $(".content-section-a").each(function(i, el) {
+        $(el).find(".right").height( $(el).find(".left .lead").height() + 60 );
+      });
+      $(".content-section-b").each(function(i, el) {
+        $(el).find(".left").height( $(el).find(".right .lead").height() + 60 );
+      });
+    } else {
+      $(".content-section-a .right, .content-section-b .left").height(400);
+    }
+  }
+  $(window).resize(adjustImages);
+  adjustImages();
+});
+</script>
+
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 

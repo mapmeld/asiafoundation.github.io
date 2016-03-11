@@ -34,6 +34,22 @@ body {
   height: 100%;
 }
 
+.circular.arrowed {
+  color: #fff;
+  background: #2bb;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-top: -50px;
+}
+
+.circular .arrow {
+  position: relative;
+  font-size: 6em;
+  bottom: 0.45em;
+  margin: 1em 0 0.5em 0;
+}
+
 .subtitle {
   text-align: left;
   font-size: 1.5em;

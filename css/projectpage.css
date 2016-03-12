@@ -3,7 +3,7 @@
 body {
   font-family: 'Work Sans', 'Helvetica', sans-serif !important;
   background-color: #000;
-  background-size: cover cover;
+  background-size: cover;
   background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,9 +90,7 @@ body {
     display: none;
   }
 
-  /*
   body {
     background-size: auto 25em;
   }
-  */
 }

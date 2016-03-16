@@ -42,5 +42,15 @@ $(function() {
     $('#approach-modal .approach').hide();
     $('#approach-modal .' + approach).show();
   });
+
+  $(".modal").on('hide.bs.modal, hidden.bs.modal', function(e){
+    var videos = $(".modal").find("iframe");
+    for (var i = 0; i < videos.length; i++) {
+      console.log('inside');
+      var ifr = $(videos[i]);
+      var src = $(ifr).attr("src");
+      $(ifr).attr("src", src + "&x=" + Math.random());
+    }
+  });
 });
 </script>

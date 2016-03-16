@@ -36,5 +36,11 @@ $(function() {
     $('#project-modal .project').hide();
     $('#project-modal .' + project).show();
   });
+
+  $('#approach-modal').on('show.bs.modal', function (event) {
+    var approach = $(event.relatedTarget).data('approach');
+    $('#approach-modal .approach').hide();
+    $('#approach-modal .' + approach).show();
+  });
 });
 </script>

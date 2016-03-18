@@ -192,6 +192,7 @@ h1 {
   h3 {
     font-weight: 400;
     font-size: 3em;
+    font-size: 3vw;
     color: #fff;
   }
 
@@ -370,9 +371,15 @@ footer {
     display: none;
   }
 
-  .service-item.icon img {
-    width: 50%;
-    height: auto;
+  .service-item.icon {
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    h3 {
+      font-size: 9vw;
+    }
   }
 
   .hide {

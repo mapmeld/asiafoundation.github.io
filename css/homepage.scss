@@ -139,6 +139,20 @@ h1 {
   }
 }
 
+.callout {
+  height: auto;
+}
+
+#portfolio, .call-to-action, .callout .text-vertical-center {
+  padding: 15px 0;
+  height: auto;
+
+  .noline, .noline:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
 #portfolio {
   padding-bottom: 0;
 }
@@ -203,7 +217,6 @@ img.banner {
   max-width: 100%;
   margin: 20px 0;
 }
-
 
 .modal {
   &#approach-modal .modal-header .close {
@@ -305,6 +318,10 @@ footer {
 
 @media (max-width: 900px) {
   /* mobile-specific CSS */
+
+  .header h3 {
+    width: 90%;
+  }
 
   .text-vertical-center h1 {
     font-size: 3em;

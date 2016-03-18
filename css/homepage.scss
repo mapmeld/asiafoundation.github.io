@@ -317,8 +317,13 @@ footer {
 @media (max-width: 900px) {
   /* mobile-specific CSS */
 
+  h1 {
+    font-size: 10vw;
+  }
+
   .header h3 {
     width: 90%;
+    font-size: 21px;
   }
 
   .text-vertical-center h1 {
@@ -329,10 +334,11 @@ footer {
   .callout {
     h1 {
       font-size: 35pt;
+      font-size: 10vw;
     }
 
     h2 {
-      font-size: 18pt;
+      font-size: 22px;
     }
   }
 

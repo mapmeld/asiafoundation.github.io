@@ -178,11 +178,8 @@ h1 {
 
 .service-item {
   text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
   padding: 20px;
   background: #a0bdcf;
-  border-radius: 5px;
 
   a {
     text-decoration: none;
@@ -375,11 +372,6 @@ footer {
   }
 
   .service-item.icon {
-    img {
-      width: 50%;
-      height: auto;
-    }
-
     h3 {
       font-size: 9vw;
     }

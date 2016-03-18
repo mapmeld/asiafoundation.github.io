@@ -2,7 +2,7 @@
 ---
 
 
-@import url(//fonts.googleapis.com/css?family=Work+Sans);
+@import url(//fonts.googleapis.com/css?family=Work+Sans:400,300,200,500);
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -18,13 +18,14 @@ body {
     font-size: 4vw;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 400;
   }
 
   h3 {
-    font-weight: lighter;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 300;
   }
 }
 
@@ -35,7 +36,7 @@ body {
 
 h1 {
   font-size: 35pt;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 45px;
   text-align: center;
 }
@@ -59,6 +60,24 @@ h1 {
   background-color: #4888fa;
   padding: 20px;
   border-radius: 8px;
+}
+
+.content-section-a, .content-section-b {
+  .section-heading {
+      margin-bottom: 30px;
+      font-weight: 300;
+      font-size: 1.8vw;
+  }
+
+  .lead {
+    font-weight: 200;
+  }
+
+  .section-heading-spacer {
+      float: left;
+      width: 200px;
+      border-top: 3px solid #e7e7e7;
+  }
 }
 
 .content-section-a {
@@ -107,18 +126,6 @@ h1 {
   margin-top: 120px;
 }
 
-.section-heading {
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 2vw;
-}
-
-.section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
-}
-
 .partners {
   div {
     width: 100%;
@@ -157,10 +164,6 @@ h1 {
   padding-bottom: 0;
 }
 
-.lead {
-  font-weight: 100;
-}
-
 .bg-primary {
   margin-top: -1px;
 }
@@ -187,7 +190,7 @@ h1 {
   }
 
   h3 {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3em;
     font-size: 2.5vw;
     color: #fff;
@@ -221,6 +224,10 @@ img.banner {
     margin-top: -30px;
   }
 
+  .subtitle {
+    font-weight: 300;
+  }
+
   .modal-dialog {
     margin-top: 80px !important;
   }
@@ -234,7 +241,7 @@ img.banner {
   .modal-title {
     font-size: 3em;
     color: #999;
-    font-weight: normal;
+    font-weight: 300;
     margin-top: 20px;
   }
 
@@ -247,6 +254,7 @@ img.banner {
     text-align: left;
     font-size: 1.4em;
     line-height: 1.6em;
+    font-weight: 300;
 
     strong {
       display: block;
@@ -277,7 +285,7 @@ img.banner {
         position: relative;
         font-size: 10em;
         bottom: 0.35em;
-        margin: 1em 0 0.5em 0;
+        margin: 1em 0 1em 0;
       }
     }
   }

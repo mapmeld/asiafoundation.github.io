@@ -274,15 +274,12 @@ img.banner {
     &.arrowed {
       color: #fff;
       background: #2bb;
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-      margin-top: -50px;
+      border-radius: 4.5em;
 
       .arrow {
         position: relative;
-        font-size: 6em;
-        bottom: 0.45em;
+        font-size: 10em;
+        bottom: 0.35em;
         margin: 1em 0 0.5em 0;
       }
     }

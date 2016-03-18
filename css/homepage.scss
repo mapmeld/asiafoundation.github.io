@@ -148,6 +148,12 @@ h1 {
 
 .callout {
   height: auto;
+
+  .text-vertical-center {
+    h1, h3 {
+      font-weight: 400;
+    }
+  }
 }
 
 #portfolio, .call-to-action, .callout .text-vertical-center {

@@ -171,7 +171,7 @@ h1 {
 }
 
 #portfolio {
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .bg-primary {
@@ -181,6 +181,11 @@ h1 {
 #services-header {
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+#portfolio-header {
+  padding: 30px;
   margin: 0;
 }
 

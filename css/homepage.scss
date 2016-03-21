@@ -235,10 +235,6 @@ img.banner {
 }
 
 .modal {
-  &#approach-modal .modal-header .close {
-    margin-top: -30px;
-  }
-
   .subtitle {
     font-weight: 300;
   }
@@ -410,5 +406,20 @@ footer {
 
   .mobile-br {
     display: block;
+  }
+
+  .modal {
+    .modal-title {
+      font-size: 6.2vw;
+    }
+
+    .modal-body {
+      margin-left: 4%;
+      margin-right: 4%;
+
+      .subtitle {
+        font-size: 21px;
+      }
+    }
   }
 }

@@ -178,12 +178,6 @@ h1 {
   margin-top: -1px;
 }
 
-#services-header {
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.6);
-  margin: 0;
-}
-
 #portfolio-header {
   padding: 30px;
   margin: 0;
@@ -410,16 +404,37 @@ footer {
   }
 
   .modal {
+    button {
+      border: 3px solid #ccc;
+      font-size: 20pt;
+      width: 20pt;
+      height: 22pt;
+      padding-bottom: 4pt;
+      vertical-align: middle;
+    }
+
     .modal-title {
       font-size: 6.2vw;
+    }
+
+    .modal-dialog {
+      margin-left: 0;
+      margin-right: 0;
+
+      .modal-content {
+        border-radius: 0;
+      }
     }
 
     .modal-body {
       margin-left: 0;
       margin-right: 0;
+      padding-left: 5px;
+      padding-right: 5px;
 
-      .subtitle {
-        font-size: 21px;
+      .subtitle, .written {
+        font-size: 1.1em;
+        line-height: 1.4em;
       }
     }
   }

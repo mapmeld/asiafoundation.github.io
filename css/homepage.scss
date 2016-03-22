@@ -376,8 +376,15 @@ footer {
   }
 
   .service-item.icon {
+    padding: 20px 30px 45px 30px;
+
     h3 {
-      font-size: 9vw;
+      font-size: 10vw;
+      margin-bottom: 5vw;
+    }
+
+    img {
+      width: 65%;
     }
   }
 

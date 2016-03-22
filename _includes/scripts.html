@@ -35,18 +35,23 @@ $(function() {
     var project = $(event.relatedTarget).data('project');
     $('#project-modal .project').hide();
     $('#project-modal .' + project).show();
+    if ($(window).width() < 900 && typeof Hyphenator !== 'undefined') {
+      Hyphenator.run();
+    }
   });
 
   $('#approach-modal').on('show.bs.modal', function (event) {
     var approach = $(event.relatedTarget).data('approach');
     $('#approach-modal .approach').hide();
     $('#approach-modal .' + approach).show();
+    if ($(window).width() < 900 && typeof Hyphenator !== 'undefined') {
+      Hyphenator.run();
+    }
   });
 
   $(".modal").on('hide.bs.modal, hidden.bs.modal', function(e){
     var videos = $(".modal").find("iframe");
     for (var i = 0; i < videos.length; i++) {
-      console.log('inside');
       var ifr = $(videos[i]);
       var src = $(ifr).attr("src");
       $(ifr).attr("src", src + "&x=" + Math.random());
@@ -54,3 +59,6 @@ $(function() {
   });
 });
 </script>
+
+<script src="/js/hyphenator.js"></script>
+<script src="/js/hyphenator-enus.js"></script>

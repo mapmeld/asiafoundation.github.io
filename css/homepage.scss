@@ -424,7 +424,7 @@ footer {
     }
 
     .modal-title {
-      font-size: 6.2vw;
+      font-size: 7.5vw;
       font-weight: 500;
     }
 
@@ -444,10 +444,17 @@ footer {
       padding-left: 10px;
       padding-right: 10px;
 
+      .subtitle {
+        font-weight: 600;
+      }
+
+      .written {
+        font-weight: 400;
+      }
+
       .subtitle, .written {
         font-size: 1.1em;
         line-height: 1.4em;
-        font-weight: 400;
       }
     }
   }

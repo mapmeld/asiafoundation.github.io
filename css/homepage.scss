@@ -230,7 +230,7 @@ img.banner {
 
 .modal {
   .subtitle {
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .modal-dialog {
@@ -245,7 +245,7 @@ img.banner {
 
   .modal-title {
     font-size: 3em;
-    color: #999;
+    color: #888;
     font-weight: 400;
     margin-top: 20px;
   }
@@ -264,6 +264,7 @@ img.banner {
     strong {
       display: block;
       margin: 1em 0 0.5em 0;
+      font-size: 1.45em;
       font-weight: 500;
     }
   }
@@ -411,6 +412,8 @@ footer {
   }
 
   .modal {
+    font-family: 'Helvetica', sans-serif;
+
     button {
       border: 3px solid #ccc;
       font-size: 20pt;
@@ -435,14 +438,16 @@ footer {
     }
 
     .modal-body {
+      color: #533;
       margin-left: 0;
       margin-right: 0;
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
 
       .subtitle, .written {
         font-size: 1.1em;
         line-height: 1.4em;
+        font-weight: 400;
       }
     }
   }

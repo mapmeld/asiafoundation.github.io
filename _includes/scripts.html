@@ -35,21 +35,42 @@ $(function() {
     var project = $(event.relatedTarget).data('project');
     $('#project-modal .project').hide();
     $('#project-modal .' + project).show();
+
+    // back button closes window
+  	window.location.hash = 'projectmodal';
+  	window.onhashchange = function() {
+  		if (!location.hash){
+  			$('#project-modal').modal('hide');
+  		}
+  	};
   });
 
   $('#approach-modal').on('show.bs.modal', function (event) {
     var approach = $(event.relatedTarget).data('approach');
     $('#approach-modal .approach').hide();
     $('#approach-modal .' + approach).show();
+
+    // back button closes window
+    window.location.hash = 'approachmodal';
+    window.onhashchange = function() {
+      if (!location.hash){
+        $('#approach-modal').modal('hide');
+      }
+    };
   });
 
   $(".modal").on('hide.bs.modal, hidden.bs.modal', function(e){
+    // halt YouTube videos
     var videos = $(".modal").find("iframe");
     for (var i = 0; i < videos.length; i++) {
       var ifr = $(videos[i]);
       var src = $(ifr).attr("src");
       $(ifr).attr("src", src + "&x=" + Math.random());
     }
+
+    // back button closes window
+    var hash = this.id;
+    history.pushState('', document.title, window.location.pathname);
   });
 });
 </script>

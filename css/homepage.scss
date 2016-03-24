@@ -26,6 +26,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-weight: 200;
+    font-size: 30px;
   }
 }
 
@@ -188,15 +189,19 @@ h1 {
   background: #d0ddff;
 }
 
+.service-item.icon:hover {
+  outline: #fff solid 2px;
+}
+
+.services a {
+  text-decoration: none;
+  color: #000;
+}
+
 .service-item {
   text-align: center;
   padding: 20px;
   background: #a0bdcf;
-
-  a {
-    text-decoration: none;
-    color: #000;
-  }
 
   h3 {
     font-weight: 300;

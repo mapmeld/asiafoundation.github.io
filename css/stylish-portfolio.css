@@ -25,6 +25,10 @@ body.normal {
     font-weight: 700;
 }
 
+.text-vertical-center h2 {
+  margin-top: 0;
+}
+
 /* Custom Button Styles */
 
 .btn-dark {

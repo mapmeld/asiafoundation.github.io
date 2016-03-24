@@ -189,10 +189,6 @@ h1 {
   background: #d0ddff;
 }
 
-.service-item.icon:hover {
-  outline: #fff solid 2px;
-}
-
 .services a {
   text-decoration: none;
   color: #000;
@@ -203,6 +199,10 @@ h1 {
   padding: 20px;
   background: #a0bdcf;
 
+  &:hover {
+    outline: #fff solid 2px;
+  }
+
   h3 {
     font-weight: 300;
     font-size: 3em;
@@ -211,7 +211,9 @@ h1 {
   }
 
   p {
-    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     font-size: 13pt;
     line-height: 16pt;
     color: #506d7f;
@@ -387,7 +389,7 @@ footer {
     }
   }
 
-  .service-item.icon {
+  .service-item {
     padding: 20px 30px 45px 30px;
 
     h3 {
@@ -397,6 +399,11 @@ footer {
 
     img {
       width: 65%;
+    }
+
+    p {
+      text-align: center;
+      width: auto;
     }
   }
 
@@ -412,10 +419,6 @@ footer {
 
   img.banner {
     display: none;
-  }
-
-  .service-item p {
-    text-align: center;
   }
 
   .mobile-br {

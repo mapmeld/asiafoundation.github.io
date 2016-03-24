@@ -22,7 +22,7 @@ $(function() {
       $(".content-section-a .left, .content-section-b .right").each(function(i, el) {
         maxHeight = Math.max(maxHeight, $(el).height());
       });
-      maxHeight += 100;
+      maxHeight += 30;
       $(".content-section-b .left, .content-section-a .right").height(maxHeight);
     } else {
       $(".content-section-a .right, .content-section-b .left").height(300);

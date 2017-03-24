@@ -12,18 +12,23 @@
     }
 
     #challenge-process{
-        width: 100vw;
-        margin-left: -25%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        width: 100%;
+        flex-wrap: nowrap;
+        display: flex;
       }
-
+      #challenge-process::-webkit-scrollbar{
+        display: none;
+      }
       #challenge-process paper-card{
+        flex: 0 0 auto;
         background-color: #FFF;
-        width: 384px;
+        width: 25vw;
         margin-right: 16px;
         margin-bottom: 16px;
         box-sizing: border-box;
-        flex: 0 0 auto;
-        align-self:flex-start;
       }
 
       #challenge-process iron-icon{
@@ -43,76 +48,73 @@
       #challenge-process iron-collapse{
         width: 100%;
       }
-      @media (max-width: 640px) {
+      @media (min-width: 320px) and (max-width: 800px) {
         
         #challenge-process{
           width: 100%;
           margin: 0;
         }
+        #challenge-process paper-card{
+          width: 75vw;
+        }
       }
     </style>
     		
               
-              <div id="challenge-process" class="horizontal around-justified layout">
+              <div id="challenge-process">
    
                     <paper-card heading="1. Register" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
                       <div class="card-content">
                          March 27, 2017
-                         <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
-                        <iron-collapse>
-                        Individuals interested in participating in this challenge should form teams of two submit an application to The Asia Foundation with their CVs and links to past work. Reviewers may contact applicants for an interview.
-                      </iron-collapse>
+                         <p>
+                        Individuals interested in participating in this challenge should form teams of two submit an application to The Asia Foundation with their CVs and links to past work. Reviewers may contact applicants for an interview.</p>
+                      
                       </div>
                     </paper-card>
             
                   <paper-card heading="2. Selection" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
                     <div class="card-content">
                       March 31, 2017
-                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
-                      <iron-collapse>
+                      <p>
                         One team from each country will be selected as finalists, and will begin a period of preparation and research ahead of the hackathon.
-                      </iron-collapse>
+                      </p>
                     </div>
                   </paper-card>
                  
                   <paper-card heading="3. Ideation" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
                     <div class="card-content">
                       May 1, 2017
-                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
-                      <iron-collapse>
+                      <p>
                         Before the hackathon begins, finalist teams will be expected to define the specific “pain point(s)” their solution will address and their overall product vision. The vision should be justifiable based on existing data or the finalists’ own interactions and discussions with prospective MSME users. Finalists will receive support throughout this “ideation” phase, including regular Google Hangouts and Q&amp;A periods with experts from The Asia Foundation, Google, or other organizations.
-                      </iron-collapse>
+                      </p>
                     </div>
                   </paper-card>
                   
                   <paper-card heading="4. Hackathon" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
                     <div class="card-content">
                       May 19 and 20, 2017
-                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
-                      <iron-collapse>
+                     <p>
                         Hackathon - Finalists will travel to Hanoi, Vietnam, with all travel, lodging, and incidental expenses paid by The Asia Foundation. During a 48-hour hackathon, finalist teams will work to prototype their ideas.
-                      </iron-collapse>
+                      </p>
                     </div>
                   </paper-card>
                  
                   <paper-card heading="5. Pitches" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
                     <div class="card-content">
                       May 20, 2017
-                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
-                      <iron-collapse>
+                      <p>
                         Pitches &amp; Judging - Finalist teams will demonstrate their newly completed prototypes for a panel of judges and an audience that will include APEC policymakers up to the ministerial level, as well as entrepreneurs and development actors from around the region.
               Pitches will occur on May 20, and winners will be announced the same day
-                      </iron-collapse>
+                      </p>
                     </div>
                   </paper-card>
                   
                   <paper-card heading="6. Get In To Market" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
                     <div class="card-content">
                       June, 2017
-                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
-                      <iron-collapse>
+                      <p>
                         Taking product(s) to market - All finalists are encouraged to continue to refine their products and eventually take them to market. The winning team will receive direct support from The Asia Foundation and APEC to cover hosting and maintenance costs associated with this for up to two years.
-                      </iron-collapse>
+                      </p>
                     </div>
                   </paper-card>
                   

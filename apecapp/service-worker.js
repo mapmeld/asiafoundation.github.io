@@ -29,7 +29,7 @@
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["/index.html","510db4da5e922787e597e857cb750e90"],["/src/apec-app.html","1a9dd7cd2ccffe6610a5a95a07a565e2"]];
+var PrecacheConfig = [["/index.html","510db4da5e922787e597e857cb750e90"],["/src/apec-app.html","3a0f9ffcce33ccf683a0dffc0170d731"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1--' + (self.registration ? self.registration.scope : '') + '-';
 

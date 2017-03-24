@@ -1,0 +1,123 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
+</head><body><dom-module id="apec-process">
+  <template>
+    <style>
+    :host {
+    	display: block;
+    }
+
+    #challenge-process{
+        width: 100vw;
+        margin-left: -25%;
+      }
+
+      #challenge-process paper-card{
+        background-color: #FFF;
+        width: 384px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        align-self:flex-start;
+      }
+
+      #challenge-process iron-icon{
+        position: absolute;
+        bottom:-10px;
+        left: 50%;
+        margin-left:-12px;
+      }
+
+      #challenge-process .item{
+          background-color: #A14888;
+          --paper-card-header-color:#FFF;
+          color: #FFF;
+          padding-right: 1em; 
+          padding-bottom: 1em;
+      }
+      #challenge-process iron-collapse{
+        width: 100%;
+      }
+      @media (max-width: 640px) {
+        
+        #challenge-process{
+          width: 100%;
+          margin: 0;
+        }
+      }
+    </style>
+    		
+              
+              <div id="challenge-process" class="horizontal around-justified layout">
+   
+                    <paper-card heading="1. Register" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
+                      <div class="card-content">
+                         March 27, 2017
+                         <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+                        <iron-collapse>
+                        Individuals interested in participating in this challenge should form teams of two submit an application to The Asia Foundation with their CVs and links to past work. Reviewers may contact applicants for an interview.
+                      </iron-collapse>
+                      </div>
+                    </paper-card>
+            
+                  <paper-card heading="2. Selection" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
+                    <div class="card-content">
+                      March 31, 2017
+                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+                      <iron-collapse>
+                        One team from each country will be selected as finalists, and will begin a period of preparation and research ahead of the hackathon.
+                      </iron-collapse>
+                    </div>
+                  </paper-card>
+                 
+                  <paper-card heading="3. Ideation" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
+                    <div class="card-content">
+                      May 1, 2017
+                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+                      <iron-collapse>
+                        Before the hackathon begins, finalist teams will be expected to define the specific “pain point(s)” their solution will address and their overall product vision. The vision should be justifiable based on existing data or the finalists’ own interactions and discussions with prospective MSME users. Finalists will receive support throughout this “ideation” phase, including regular Google Hangouts and Q&amp;A periods with experts from The Asia Foundation, Google, or other organizations.
+                      </iron-collapse>
+                    </div>
+                  </paper-card>
+                  
+                  <paper-card heading="4. Hackathon" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
+                    <div class="card-content">
+                      May 19 and 20, 2017
+                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+                      <iron-collapse>
+                        Hackathon - Finalists will travel to Hanoi, Vietnam, with all travel, lodging, and incidental expenses paid by The Asia Foundation. During a 48-hour hackathon, finalist teams will work to prototype their ideas.
+                      </iron-collapse>
+                    </div>
+                  </paper-card>
+                 
+                  <paper-card heading="5. Pitches" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
+                    <div class="card-content">
+                      May 20, 2017
+                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+                      <iron-collapse>
+                        Pitches &amp; Judging - Finalist teams will demonstrate their newly completed prototypes for a panel of judges and an audience that will include APEC policymakers up to the ministerial level, as well as entrepreneurs and development actors from around the region.
+              Pitches will occur on May 20, and winners will be announced the same day
+                      </iron-collapse>
+                    </div>
+                  </paper-card>
+                  
+                  <paper-card heading="6. Get In To Market" elevation="1" animated-shadow="false" class="item" on-click="_toggle">
+                    <div class="card-content">
+                      June, 2017
+                      <iron-icon icon="hardware:keyboard-arrow-down"></iron-icon>
+                      <iron-collapse>
+                        Taking product(s) to market - All finalists are encouraged to continue to refine their products and eventually take them to market. The winning team will receive direct support from The Asia Foundation and APEC to cover hosting and maintenance costs associated with this for up to two years.
+                      </iron-collapse>
+                    </div>
+                  </paper-card>
+                  
+              </div>
+    </template>
+
+  <script>Polymer({is:"apec-process",_toggle:function(e){var o=Polymer.dom(e).localTarget;if("PAPER-CARD"===o.tagName)var r=Polymer.dom(o).querySelector("iron-collapse");else{o=Polymer.dom(o).parentNode;var r=Polymer.dom(Polymer.dom(o).parentNode).querySelector("iron-collapse")}Polymer.dom(o).querySelector("iron-icon").icon=r.opened?"hardware:keyboard-arrow-down":"hardware:keyboard-arrow-up",r.toggle()}});</script>
+</dom-module></body></html>

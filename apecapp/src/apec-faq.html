@@ -1,0 +1,106 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/hardware-icons.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
+</head><body><dom-module id="apec-faq">
+  <template>
+    <style>
+    :host {
+    	display: block;
+      font-size: 1.2em;
+    }
+    li.question{
+      margin-bottom: 2em;
+    }
+
+    .question a{
+      display: block;
+      cursor: pointer;
+      position: relative;
+      padding-right: 48px;
+    }
+
+    .question iron-icon{
+      position: absolute;
+      right: 16px;
+      top:4px;
+    }
+
+    .question iron-collapse{
+      color: #666;
+    }
+    </style>
+
+    <ol>
+    <template is="dom-repeat" items="{{questions}}">
+      <li class="question">
+      <a on-click="_toggle">[[item.q]]<iron-icon icon="hardware:keyboard-arrow-down"></iron-icon></a>
+      <iron-collapse>
+        <div class="collapse-content">
+          <div>[[item.a]]</div>
+        </div>
+      </iron-collapse>
+      </li>
+    </template>
+    </ol>
+    </template>
+
+  <script>
+    Polymer({
+
+      is: 'apec-faq',
+      properties:{
+        questions:{
+          type:Array,
+          value:[{ 
+              q:"How long will the event in Hanoi be?",
+              a:"Selected teams from outside Hanoi need to arrive by the afternoon of 17 May 2017 and leave on 20 May 2017. Teams from Hanoi should be available from the evening of 17 May 2017 to the evening of 19 May 2017."
+            },{
+              q:"Is flight and accommodation covered?",
+              a:"Yes, we will provide return flights from your city to Hanoi and accomodation from 17-20 May 2017 (three nights)."
+            },{
+              q:"Is there any platform restriction?",
+              a:"We suggest building Android or Web apps, due to the fact that APEC economies mostly use these two platforms."
+            },{
+              q:"Is there any technology restriction?",
+              a:"No, you can build any technology that you’re familiar with. But through a partnership with Google, winners of this event will have access to Google-provided benefits like access to mentors, product teams, or Google products."
+            },{
+              q:"Does my entry have to be a new app?",
+              a:"Yes, you must build the app starting from the time you are confirmed as participants in this APEC App Challenge, not before. But you can build the app on top of yours or other platform."
+            },{
+              q:"So it’s not a hackathon?",
+              a:"Yes, it’s not really a hackathon, it’s an app challenge. In Hanoi, we will have a “hackathon” period to finalize your app, where we provide access to mentors. But you can build your app before you come to Hanoi, starting from the moment you are confirmed as participants."
+            },{
+              q:"Are teams restricted to two members only?",
+              a:"You can receive help from more than two persons while you are developing the app, but only two persons from each team can attend our final hackathon. Others can support you remotely, but only these two teammates will be publicly listed as participants in the challenge or receive prize packages."
+            },{
+              q:"Is this event restricted to developers and designers only?",
+              a:"If you wish, you may receive help from designers, marketers, or others while building your app. However, during the hackathon in Hanoi you will be finalizing the app, not building the idea, and so we suggest you only bring developers or designers who can actually work on finishing the app."
+            },{
+              q:"Do pitches have to be in English?",
+              a:"You may make your pitch to the judges in either English or Vietnamese."
+            }
+          ]
+        }
+      },
+      _toggle: function(event) {
+        var question = Polymer.dom(event).localTarget;
+        if(question.nodeName==='IRON-ICON'){
+          question=Polymer.dom(question).parentNode;
+        }
+        var parentNode=Polymer.dom(question).parentNode;
+       
+        
+        var answer = Polymer.dom(parentNode).querySelector('iron-collapse');
+      
+ 		
+        Polymer.dom(question).querySelector('iron-icon').icon = answer.opened ? 'hardware:keyboard-arrow-down'
+                                          : 'hardware:keyboard-arrow-up';
+        answer.toggle();
+      }
+      
+      
+    });
+  </script>
+</dom-module></body></html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
     <title>APEC App Challenge - Hanoi, Vietnam | May 18 &amp; 19, 2017</title>
     <meta name="description" content="APEC App Challenge will create innovative apps and online platforms that have the potential to help MSMEs in APEC economies leverage the internet to begin exporting to foreign markets.">
-
-    
+    <meta name="theme-color" content="#27a8d8">
+    <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="/manifest.json">
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
@@ -20,7 +20,13 @@
     <link rel="import" href="src/apec-app.html">
   </head>
   <body>
+    <noscript>This website need Javascript to be enabled to make it works</noscript>
     <apec-app></apec-app>
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+      }
+    </script>
   
 
 </body></html>

@@ -1,0 +1,73 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="apec-shell.html">
+<link rel="import" href="shared-styles.html">
+</head><body><dom-module id="apec-challenges">
+  <template>
+    <style include="shared-styles">
+    :host {
+    	display: block;
+      --main-color: #85276B;
+      @apply(--paper-font-common-base);
+    }
+    
+    </style>
+    <apec-shell menu="{{menu}}">
+        <header>
+            <div>
+            <h2>Challenge Overview</h2>
+   
+            <p>Pick one or more challenges that you want to work with. <br>Start develop your app now!</p>
+            </div>
+        </header>
+        <section id="standards-regulatory">
+          <div class="container">
+              <h3>1. Standards and Regulatory Compliance</h3>
+              <p>For SMEs interested in exporting beyond their borders, identifying the standards and technical regulations that apply to their products, and demonstrating compliance, can be a major challenge. Information is often unavailable, outdated and unreliable. Access to information on regulations and standards is often not organized in the same way nationally, regionally, and internationally, and different destination markets often apply different regulations and standards. Moreover, standards and regulations are a constantly shifting landscape as a result of changing national regulations and evolving consumer preferences that can quickly alter the de facto standards for an industry or product. In addition to the fixed cost of searching for and interpreting standards and regulations information, SMEs products often do not meet those standards or certifications, and their ability to meet them is hindered by the cost associated with bringing their processes and products into compliance. </p>
+              <p class="learnmore"><a href="https://drive.google.com/open?id=0B2NAyeakxcpwUUwyV2x5S3ZEWnc"><paper-button raised=""><iron-icon icon="help-outline"></iron-icon> Learn More</paper-button></a></p>
+          </div>
+        </section>
+        <section id="access-financial">
+          <div class="container">
+              <h3>2. Access to Financial Services</h3>
+              <p>Access to finance, from working capital finance to supply chain finance to trade finance, is a critical factor allowing  GVC firms to survive,grow, and navigate risks and obstacles. Yet, for SMEs in the Asia Pacific region, accessing beneficial and risk-mitigating financial products and services is a major challenge. SMEs report relying heavily on their own capital, family loans, and/or retained profits for business operations when seeking funding sources. The problem runs deep, from high barriers imposed by local financial institutions and prohibitively expensive loans, to lack of alternatives to traditional financing models (or lack of awareness of alternatives), to poor financial literacy on the SMEs’ part and inability to provide proper documentation. Even when financing programs are made available through government sponsored SME promotion programs, they are often not utilized or prioritized by businesses.</p>
+
+              <p class="learnmore"><a href="https://drive.google.com/open?id=0B2NAyeakxcpwbHpfQV9xVE1zV0k"><paper-button raised=""><iron-icon icon="help-outline"></iron-icon> Learn More</paper-button></a></p>
+          </div>
+        </section>
+        <section id="logistic-supply-chain">
+          <div class="container">
+              <h3>3. Logistics and Supply Chain Management</h3>
+              <p>For SMEs interested in exporting beyond their borders, identifying the standards and technical regulations that apply to their products, and demonstrating compliance, can be a major challenge. Information is often unavailable, outdated and unreliable. Access to information on regulations and standards is often not organized in the same way nationally, regionally, and internationally, and different destination markets often apply different regulations and standards. Moreover, standards and regulations are a constantly shifting landscape as a result of changing national regulations and evolving consumer preferences that can quickly alter the de facto standards for an industry or product. In addition to the fixed cost of searching for and interpreting standards and regulations information, SMEs products often do not meet those standards or certifications, and their ability to meet them is hindered by the cost associated with bringing their processes and products into compliance. </p>
+              <p>An efficient supply chain is vital to meeting customer expectations and improving SMEs’ bottom lines. E-commerce, while opening market opportunities and leveling the playing field with larger players, is also driving demand for faster and more reliable business transactions. For many would-be exporters, especially those in remote locations, fulfilling  cross-border transactions can be challenging, with options limited, costly, or simply unavailable.</p>
+
+              <p class="learnmore"><a href="https://drive.google.com/open?id=0B2NAyeakxcpwNm9ud05ncGVmd0E"><paper-button raised=""><iron-icon icon="help-outline"></iron-icon> Learn More</paper-button></a></p>
+          </div>
+        </section>
+        <section id="partner-networks">
+          <div class="container">
+              <h3>4. Building partner networks and gaining market intelligence</h3>
+              <p>SMEs interested in expanding to new markets may be held back by lack of confidence in their knowledge of target markets, rules and regulations, and potential buyers and customer preferences in target markets. Social networks and the internet are supplements to traditional resources like local exporters associations and government export promotion agencies, but often, too much information can make it even more difficult for businesses to identify potential buyers and suppliers, partners, and mentors, and identify essential and accurate market intelligence. Even tasks as simple as determining where to start with respect to gathering information and developing an export strategy can be problematic.</p>
+
+              <p class="learnmore"><a href="https://drive.google.com/open?id=0B2NAyeakxcpwZWYtUU4wdjBNaUk"><paper-button raised=""><iron-icon icon="help-outline"></iron-icon> Learn More</paper-button></a></p>
+          </div>
+        </section>
+    </apec-shell>
+  </template>
+  <script>
+    Polymer({
+      is: 'apec-challenges',
+      properties:{
+        menu: {
+            type: Array,
+            value: [
+              {title:'Standards and Regulatory',url:'#standards-regulatory',target:'standards-regulatory'},
+              {title:'Financial',url:'#access-financial',target:'access-financial'},
+              {title:'Logistic',url:'#logistic-supply-chain',target:'logistic-supply-chain'},
+              {title:'Networks',url:'#partner-networks',target:'partner-networks'}
+            ]
+        },
+      }      
+      
+    });
+  </script>
+</dom-module></body></html>

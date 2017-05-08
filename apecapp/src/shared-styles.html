@@ -1,0 +1,196 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- shared styles for all views -->
+</head><body><dom-module id="shared-styles">
+    <template>
+        <style>
+        	a {
+		        text-decoration: none;
+		        font-size: inherit;
+		        color:var(--main-color);
+		      }
+		      #wide-toolbar {
+		        @apply(--layout-horizontal);
+		        @apply(--layout-justified);
+		      }
+		      .toolbar{
+		        background-color: rgba(255, 255, 255, 0.95);
+		      }
+		      paper-tabs {
+		        height: 100%;
+		        @apply(--layout-end-justified);
+		        --paper-tabs-selection-bar-color:var(--main-color);
+		        font-size: 1em;
+		      }
+		  	  paper-tabs a {
+		  	  	line-height: 64px;
+		  	  	font-weight: normal;
+		  	  }
+		      #logo{
+		        margin-right: 10px;
+		        height: 30px;
+		        @apply(--layout-start);
+		      }
+		      #logo img{
+		        height: 30px;
+		      }
+		      header {
+		        background-image: url('//asiafoundation.github.io/img/bg.jpg');
+		        backgrond-repeat: no-repeat;
+		        background-size: cover;
+		        color: white;
+		        text-align: center;
+		      }
+		      header > div{
+		        background: rgba(0, 0, 0, 0.7);
+		        @apply(--layout-vertical);
+		        @apply(--layout-center-center);
+		        height: calc(100vh - 64px);
+		        padding: 0 16px;
+		      }
+		      header h2 {
+		        font-size: 56px;
+		        font-weight: 300;
+		        margin: 0;
+		        line-height: 1.5em;
+		        
+		      }
+		      header p {
+		        font-size: 32px;
+		        line-height: 1.8em;
+		   
+		      }
+		      header #overview{
+		        font-size: 24px;
+		        max-width: 800px;
+		      }
+		      header paper-button, section paper-button{
+		        background-color: var(--main-color);
+		        color: #FFF;
+		        padding-left:32px;
+		        padding-right: 32px;
+		      }
+
+		      section p.learnmore{
+		      	text-align: center;
+		      }
+
+		      header iron-icon{
+		        padding-right: 16px;
+		        display: inline-block;
+		        height: 32px;
+		        width: 32px;
+		        vertical-align: bottom;
+		      }
+		      section {
+		        padding: 66px 16px;
+		      }
+		      .container {
+		        max-width: 800px;
+		        margin: 0 auto;
+		      }
+
+		      .container-full{
+		        max-width: 100%;
+		        padding: 16px;
+		      }
+
+		      .container > * {
+		 
+		      }
+		      .container img {
+		        max-width: 100%;
+		        max-height: 100%;
+		      }
+		      .container h3,.container-full h3 {
+		        font-size: 32px;
+		        font-weight: 300;
+		        margin: 24px 0;
+		        text-align: center;
+		        color: var(--main-color);
+		        text-transform:capitalize; 
+		      }
+		      .container p,.container-full p {
+		        text-align: justify;
+		      }
+
+		      
+		      #partners-logo{
+		        text-align: center;
+		      }
+		      #partners-logo img{
+		        display: inline-block;
+		        margin: 16px;
+		      }
+		      
+		      drawer a{
+		        display: block;
+		      }
+		      footer{
+		        
+		        background-color: var(--main-color);
+		        color: #FFF;
+		        margin-bottom: -16px;
+		        padding:32px;
+		      }
+		      footer .container p{
+		        text-align: center;
+		      }
+		      footer .social-media a{
+		        padding 0 10px;
+		      }
+
+		      h4{
+		        padding: 15px 20px 15px 45px;
+		        margin: 0 0 20px;
+		        position: relative;
+		        text-align: center;
+		        font-size: 1.4em;
+		        font-weight: normal;
+		        color: #333;
+		      }
+
+
+
+		      
+		      @media (max-width: 640px) {
+		        .container {
+		          @apply(--layout-vertical);
+		        }
+		        header #overview{
+		          font-size: 14px;
+		        }
+		        header h2 {
+		        font-size: 32px;
+		        font-weight: 100;
+		        margin: 0;
+		        line-height: 1.5em;
+		        
+		        }
+		        header p {
+		          font-size: 24px;
+		          line-height: 1.8em;
+		     
+		        }
+		        header #overview{
+		          font-size: 16px;
+		        }
+		        header paper-button{
+		          
+		        }
+		        header iron-icon{
+		          padding-right: 16px;
+		          display: inline-block;
+		          height: 32px;
+		          width: 32px;
+		          vertical-align: bottom;
+		        }
+		        
+		      }
+		      [hidden] {
+		        display: none !important;
+		      }
+        </style>
+    </template>
+</dom-module>
+</body></html>

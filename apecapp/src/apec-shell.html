@@ -1,0 +1,157 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-grid/app-grid-style.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/social-media-icons/social-media-icons.html">
+<link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-styles/typography.html">
+<link rel="import" href="apec-process.html">
+<link rel="import" href="apec-faq.html">
+<link rel="import" href="shared-styles.html">
+</head><body><dom-module id="apec-shell">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        --main-color: #85276B;
+        @apply(--paper-font-common-base);
+      }
+      
+    </style>
+    <iron-media-query query="min-width: 600px" query-matches="{{wideLayout}}"></iron-media-query>
+    
+
+    <app-drawer-layout force-narrow="">
+      <app-drawer id="drawer">
+
+        <app-toolbar></app-toolbar>
+
+        <!-- Nav on mobile: side nav menu -->
+        <paper-menu selected="{{selected}}" attr-for-selected="name" on-iron-select="gotoSection">
+          <a href="/"><paper-item>Home</paper-item></a>
+          <template is="dom-repeat" items="{{menu}}">
+            <a href="{{item.url}}"><paper-item name$="{{item.target}}">{{item.title}}</paper-item></a>
+          </template>
+        </paper-menu>
+
+      </app-drawer>
+      <app-header-layout>
+
+        <app-header reveals="" effects="waterfall">
+          <app-toolbar class="toolbar" hidden$="{{wideLayout}}">
+            <paper-icon-button class="menu-button" icon="menu" drawer-toggle=""></paper-icon-button>
+            <a id="logo" href="http://asiafoundation.org">
+              <img src="//asiafoundation.github.io/img/logo.png" alt="The Asia Foundation">
+            </a>
+          </app-toolbar>
+
+          <app-toolbar id="wide-toolbar" class="toolbar" hidden$="{{!wideLayout}}">
+            <a id="logo" href="http://asiafoundation.org">
+              <img src="//asiafoundation.github.io/img/logo.png" alt="The Asia Foundation">
+            </a>
+            <paper-tabs selected="{{selected}}" attr-for-selected="name">
+              <paper-tab name$="{{item.target}}"><a href="/">Home</a></paper-tab>
+              <template is="dom-repeat" items="{{menu}}">
+              <paper-tab name$="{{item.target}}"><a href="{{item.url}}">{{item.title}}</a></paper-tab>
+              </template>
+            </paper-tabs>
+          </app-toolbar>
+
+        </app-header>
+
+        <slot></slot>
+        <section id="partners">
+          <div class="container">
+              <h3>Partners</h3>
+              <div id="partners-logo" class="horizontal around-justified layout">
+                  <img src="../images/vietnam-eco-trade.png" width="80%" alt="Vietnam Ministry">
+                  <img src="../images/apec.gif" width="200" alt="APEC">
+                  <img src="../images/google.png" width="300" alt="Google">
+                  
+              </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="container">
+              <h3>Contact</h3>
+              <p></p>
+              <p>Send us an email with any questions and feedback at <a href="mailto:yohan.totting@asiafoundation.org">yohan.totting@asiafoundation.org</a> and <a href="mailto:benjamin.lokshin@asiafoundation.org">benjamin.lokshin@asiafoundation.org</a></p>
+          </div>
+        </section>
+        <footer class="layout center">
+          <div class="container">
+          <p>
+            465 California St., 9th Floor<br>
+            San Francisco, CA 94104<br>
+            (415) 982-4640
+          </p>
+          <p class="social-media layout-horizontal center-justified">
+          <a href="https://facebook.com/asiafoundation"><social-media-icons icon="facebook" color="#FFF"></social-media-icons></a>
+            
+              <a href="https://twitter.com/asia_foundation"><social-media-icons icon="twitter" color="#FFF"></social-media-icons></a>
+            
+              <a href="https://github.com/asiafoundation"><social-media-icons icon="github" color="#FFF"></social-media-icons></a>
+          </p>
+          <p class="text-muted">© The Asia Foundation 2017</p>
+          </div>
+        </footer>
+
+      </app-header-layout>
+    </app-drawer-layout>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'apec-shell',
+
+      properties: {
+          menu: {
+            type: Array,
+            reflectToAttribute:true,
+            value: [
+              
+            ],
+          wideLayout: {
+            type: Boolean,
+            value: false,
+            observer: 'onLayoutChange',
+          },
+          selected:{
+            type:String,
+            value:null
+          },
+
+        },
+      },
+      onLayoutChange: function(wide) {
+          console.log('check layout');
+          console.log('wide');
+          var drawer = this.$.drawer;
+          if (wide && drawer.opened) {
+            drawer.opened = false;
+          }
+      },
+      gotoSection:function(e){
+        this.$$('#'+this.selected).scrollIntoView({behavior: "smooth"});
+      }
+      
+    });
+  </script>
+</dom-module>
+</body></html>

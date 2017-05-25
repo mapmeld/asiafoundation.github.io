@@ -11,7 +11,37 @@
         --main-color: #85276B;
         @apply(--paper-font-common-base);
       }
-      
+      #winners-list {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: flex-start;
+      }
+
+      #winners-list .team{
+        width: 30%;
+      }
+
+      #winners-list .team h4,#winners-list .team h5{
+        text-align: center;
+        padding:0;
+      }
+      #winners-list .team h4.grey,#winners-list .team h5.grey{
+        color:#666;
+      }
+      #winners-list .desc{
+        text-align: justify;
+      }
+
+       @media (max-width: 640px) {
+        #winners-list {
+          flex-direction: column;
+        }
+        #winners-list .team{
+          width: 100%;
+          margin-bottom: 3em;
+        }
+       }
     </style>
     
     <apec-shell menu="{{menu}}">
@@ -19,10 +49,44 @@
             <div>
             <h2>APEC App Challenge</h2>
             <p>Hanoi, Vietnam - May 18 and 19, 2017</p>
-            <p id="overview">Some of the region’s most talented developer teams will be invited to take part in the APEC App Challenge: a competition with the aim of building an app to help micro and small businesses use the internet to export. The App Challenge is being supported by Google and The Asia Foundation and will occur on the sidelines of a major international trade meeting in Vietnam.</p>
-            <p><a href="#how"><paper-button raised=""><iron-icon icon="help-outline"></iron-icon>How To Join</paper-button></a></p>
+            <p id="overview">Some of the region’s most talented developer teams invited to take part in the APEC App Challenge: a competition with the aim of building an app to help micro and small businesses use the internet to export. The App Challenge is being supported by Google and The Asia Foundation and was occur on the sidelines of a major international trade meeting in Vietnam.</p>
+            <p><a href="#winners"><paper-button raised=""><iron-icon icon="help-outline"></iron-icon>See The Winners</paper-button></a></p>
             </div>
         </header>
+        <section id="winners">
+          <div class="container">
+              <h3>The Winners</h3>
+
+              <div id="winners-list">
+                  <div class="team">
+                    <h4>1st Place</h4>
+                    <h4 class="grey">Australia</h4>
+                    <h5 class="grey">APEC Connect</h5>
+                    <div class="desc">
+                    APEC CONNECT is an online platform designed to help small businesses register a global export identity, grow their reputation as exporters, and access export-related standards and regulations, via an open digital identity registry, interoperable localized EDI standards and Blockchain-notarized transactions.  
+                    </div>
+                  </div>
+                  <div class="team">
+                    <h4>2nd Place</h4>
+                    <h4 class="grey">Vietnam</h4>
+                    <h5 class="grey">AirLaLa</h5>
+                    <div class="desc">
+                    AirLaLa is an online marketplace and matchmaking platform for local artisans seeking to export their products abroad. Users also receive assistance from the platform to comply with standards and regulations.
+                    </div>
+                  </div>
+                  <div class="team">
+                    <h4>3rd Place</h4>
+                    <h4 class="grey">Malaysia</h4> 
+                    <h5 class="grey">Connect</h5>
+                    <div class="desc">
+                    Connect is a mobile marketplace that matches users - especially those with limited internet experience - with buyers or suppliers outside of their home markets of the user-specified good, and provides users with relevant market intelligence about that good. 
+                    </div>
+                  </div>
+              </div>
+
+              
+          </div>
+        </section>
 
         <section id="about">
           <div class="container">

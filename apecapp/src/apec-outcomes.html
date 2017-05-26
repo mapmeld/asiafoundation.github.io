@@ -1,0 +1,166 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="apec-shell.html">
+<link rel="import" href="shared-styles.html">
+</head><body><dom-module id="apec-outcomes">
+  <template>
+    <style include="shared-styles">
+    :host {
+    	display: block;
+      --main-color: #85276B;
+      @apply(--paper-font-common-base);
+    }
+    #teams-list{
+      padding-top: 5em;
+    }
+    </style>
+    <apec-shell menu="{{menu}}">
+        <header>
+            <div>
+            <h2>The Outcomes</h2>
+   
+            <p>Congratulations for our winners, and well done for all the teams.<br/>Below are the outcomes from all participant teams.</p>
+            </div>
+        </header>
+        <div id="teams-list" class="container">
+          <template is="dom-repeat" items={{outcomes}}>
+            <div class="team">
+              <template is="dom-if" if={{hasValue(item.position)}}>
+                <h5>[[item.position]]</h5> 
+              </template>
+              <template is="dom-if" if={{hasValue(item.url)}}>
+                <h4><a href="[[item.url]]">[[item.title]]</a></h4> 
+              </template>
+              <template is="dom-if" if={{!hasValue(item.url)}}>
+                <h4>[[item.title]]</h4> 
+              </template>
+              
+              <h5 class="grey">[[item.country]]</h5>
+              <div class="desc">
+              [[item.description]]
+              </div>
+            </div>
+          </template>
+            
+        </div>
+    </apec-shell>
+  </template>
+  <script>
+    Polymer({
+      is: 'apec-outcomes',
+      properties:{
+        menu: {
+            type: Array,
+            value: [
+              {title:'About',url:'/apecapp/#about',target:'about'},
+              {title:'Winners',url:'/apecapp/#winners',target:'winners'},
+              {title:'Challenge',url:'/apecapp/#challenge',target:'challenge'},
+              {title:'How',url:'/apecapp/#how',target:'how'},
+              {title:'FAQ',url:'/apecapp/#faq',target:'faq'},
+              {title:'Awards',url:'/apecapp/#awards',target:'awards'},
+              {title:'Partners',url:'/apecapp/#partners',target:'partners'},
+              {title:'Contact',url:'/apecapp/#contact',target:'contact'}
+            ]
+        },
+        outcomes: {
+            type: Array,
+            value: [
+              {
+                position:'1st Place',
+                title:'APEC Connect',
+                country:'Australia',
+                description:'APEC CONNECT is an online platform designed to help small businesses register a global export identity, grow their reputation as exporters, and access export-related standards and regulations, via an open digital identity registry, interoperable localized EDI standards and Blockchain-notarized transactions.',
+                image:'',
+                url:'http://apecconnect.org/'
+              },
+              {
+                position:'2nd Place',
+                title:'AirLaLa',
+                country:'Vietnam',
+                description:'AirLaLa is an online marketplace and matchmaking platform for local artisans seeking to export their products abroad. Users also receive assistance from the platform to comply with standards and regulations.',
+                image:'',
+                url:'https://beta.airlala.com'
+              },
+              {
+                position:'3rd Place',
+                title:'Connect',
+                country:'Malaysia',
+                description:'Connect is a mobile marketplace that matches users - especially those with limited internet experience - with buyers or suppliers outside of their home markets of the user-specified good, and provides users with relevant market intelligence about that good.',
+                image:'',
+                url:'https://play.google.com/store/apps/details?id=com.snappymob.connect'
+              },
+              {
+                title:'ITTN-Matchgeter',
+                country:'China',
+                description:'ITTN-Matchgeter is a mobile app that helps SMEs compare the import and export regulations of their commodity within their home market and target external market. When the two regulatory environments align, the commodity is considered a match for import/export, and the user is then allowed to list its product on the app and gain access to tailored marketing resources.',
+                image:'',
+                url:'https://play.google.com/store/apps/details?id=com.snappymob.connect'
+              },
+              {
+                title:'Galleon',
+                country:'Indonesia',
+                description:'Galleon is a web-based e-commerce platform that lists buyers’ product specifications, rather than sellers’ offerings. By inverting the typical sales model, Galleon generates market insight on consumer preferences for distributors and suppliers upstream, and enables transparency and competitive pricing that can be passed through the length of the value chain.',
+                image:'',
+                url:'https://play.google.com/store/apps/details?id=com.snappymob.connect'
+              },
+              {
+                title:'Wundersell',
+                country:'New Zealand',
+                description:'Wundersell is a mobile platform that provides users a direct channel of communication with potential buyers and sellers via real-time message translation, access to market intelligence, and an integrated payments processing service. The platform is based on the Facebook Messenger Chat Bot.',
+                image:'',
+                url:'https://play.google.com/store/apps/details?id=com.snappymob.connect'
+              },
+              {
+                title:'Wundersell',
+                country:'New Zealand',
+                description:'Wundersell is a mobile platform that provides users a direct channel of communication with potential buyers and sellers via real-time message translation, access to market intelligence, and an integrated payments processing service. The platform is based on the Facebook Messenger Chat Bot.',
+                image:'',
+                url:'https://play.google.com/store/apps/details?id=com.snappymob.connect'
+              },
+              {
+                title:'Producteve ',
+                country:'Philippines',
+                description:'Producteve is a mobile app that directs users unfamiliar with new export markets to relevant market demand data and research and resource persons. The app also provides automatic, real-time translation of chats for the purpose of export assistance.',
+                image:'',
+                url:''
+              },
+              {
+                title:'Dispatcher',
+                country:'Singapore',
+                description:'Dispatcher is an online matchmaker between SMEs looking to export their products overseas and freight forwarders providing shipping and logistics services. Once the freight forwarder has been selected, the app provides real-time tracking of the shipment as it makes its way to its destination.',
+                image:'',
+                url:''
+              },
+              {
+                title:'BExport',
+                country:'Vietnam',
+                description:'BExport is a web-based platform that connects MSMEs interested in expanding to new markets with industry experts that provide export consultation services specific to the businesses’ products and target markets.',
+                image:'',
+                url:''
+              },
+              {
+                title:'Export Friend',
+                country:'Thailand',
+                description:'Export Friend is a platform that employs artificial intelligence and machine learning to provide small businesses with market intelligence on products and prices globally. Once a target market has been identified, Export Friend provides online insurance services as well as suggestions for trusted logistics providers for the export product. The platform delivers information through Facebook Messenger combined with other web applications to process transactions.',
+                image:'',
+                url:'http://www.exportfriend.ml/'
+              },
+              {
+                title:'vLoc',
+                country:'Vietnam',
+                description:'Vloc is a web-based global warehouse locator that facilitates MSMEs’ ability to manage their supply chain. The vloc can reduce the cost of designing distribution and supply chain that only big corporation can afford.',
+                image:'',
+                url:'http://vloc.abivin.com:3000'
+              },
+            ]
+        },
+      },
+      hasValue:function(val){
+          if(typeof(val) === 'string' && val.length>0)
+            return true;
+          else
+            return false;
+        }      
+      
+    });
+  </script>
+</dom-module></body></html>

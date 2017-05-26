@@ -35,7 +35,7 @@
 		        height: 30px;
 		      }
 		      header {
-		        background-image: url('//asiafoundation.github.io/img/bg.jpg');
+		        background-image: url('../images/winners.jpg');
 		        backgrond-repeat: no-repeat;
 		        background-size: cover;
 		        color: white;
@@ -150,7 +150,35 @@
 		        color: #333;
 		      }
 
+		      #teams-list {
+		        display: flex;
+		        flex-direction: row;
+		        justify-content:space-between;
+		        align-items: flex-start;
+		        flex-wrap: wrap;
+		      }
 
+		      #teams-list .team{
+		        width: 30%;
+		        margin-bottom: 5em;
+		      }
+		      #teams-list .team h5{
+		      	font-size: 1em;
+		      	font-weight: lighter;
+		      }
+
+		      #teams-list .team h4,#teams-list .team h5{
+		        text-align: center;
+		        padding:0;
+		      }
+		      #teams-list .team h4.grey,#teams-list .team h5.grey{
+		        color:#666;
+		      }
+		      #teams-list .desc{
+		        text-align: justify;
+		      }
+
+		       
 
 		      
 		      @media (max-width: 640px) {
@@ -185,8 +213,18 @@
 		          width: 32px;
 		          vertical-align: bottom;
 		        }
+
+		        #teams-list {
+		          flex-direction: column;
+		        }
+
+		        #teams-list .team{
+		          width: 100%;
+		          margin-bottom: 3em;
+		        }
 		        
 		      }
+
 		      [hidden] {
 		        display: none !important;
 		      }

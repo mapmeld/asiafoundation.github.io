@@ -11,37 +11,7 @@
         --main-color: #85276B;
         @apply(--paper-font-common-base);
       }
-      #winners-list {
-        display: flex;
-        flex-direction: row;
-        justify-content:space-between;
-        align-items: flex-start;
-      }
-
-      #winners-list .team{
-        width: 30%;
-      }
-
-      #winners-list .team h4,#winners-list .team h5{
-        text-align: center;
-        padding:0;
-      }
-      #winners-list .team h4.grey,#winners-list .team h5.grey{
-        color:#666;
-      }
-      #winners-list .desc{
-        text-align: justify;
-      }
-
-       @media (max-width: 640px) {
-        #winners-list {
-          flex-direction: column;
-        }
-        #winners-list .team{
-          width: 100%;
-          margin-bottom: 3em;
-        }
-       }
+      
     </style>
     
     <apec-shell menu="{{menu}}">
@@ -57,11 +27,11 @@
           <div class="container">
               <h3>The Winners</h3>
 
-              <div id="winners-list">
+              <div id="teams-list">
                   <div class="team">
                     <h4>1st Place</h4>
                     <h4 class="grey">Australia</h4>
-                    <h5 class="grey">APEC Connect</h5>
+                    <h5 class="grey"><a href="http://apecconnect.org/">APEC Connect</a></h5>
                     <div class="desc">
                     APEC CONNECT is an online platform designed to help small businesses register a global export identity, grow their reputation as exporters, and access export-related standards and regulations, via an open digital identity registry, interoperable localized EDI standards and Blockchain-notarized transactions.  
                     </div>
@@ -69,21 +39,25 @@
                   <div class="team">
                     <h4>2nd Place</h4>
                     <h4 class="grey">Vietnam</h4>
-                    <h5 class="grey">AirLaLa</h5>
+                    <h5 class="grey"><a href="https://beta.airlala.com/">AirLaLa</a></h5>
                     <div class="desc">
                     AirLaLa is an online marketplace and matchmaking platform for local artisans seeking to export their products abroad. Users also receive assistance from the platform to comply with standards and regulations.
                     </div>
+                   
                   </div>
                   <div class="team">
                     <h4>3rd Place</h4>
                     <h4 class="grey">Malaysia</h4> 
-                    <h5 class="grey">Connect</h5>
+                    <h5 class="grey"><a href="https://play.google.com/store/apps/details?id=com.snappymob.connect">Connect</a></h5>
                     <div class="desc">
                     Connect is a mobile marketplace that matches users - especially those with limited internet experience - with buyers or suppliers outside of their home markets of the user-specified good, and provides users with relevant market intelligence about that good. 
                     </div>
+                    
                   </div>
-              </div>
 
+
+              </div>
+              <p class="learnmore"><a href="/apecapp/outcomes.html"><paper-button raised=""><iron-icon icon="help-outline"></iron-icon> All Outcomes</paper-button></a></p>
               
           </div>
         </section>
@@ -162,6 +136,7 @@
             type: Array,
             value: [
               {title:'About',url:'#about',target:'about'},
+              {title:'Winners',url:'#winners',target:'winners'},
               {title:'Challenge',url:'#challenge',target:'challenge'},
               {title:'How',url:'#how',target:'how'},
               {title:'FAQ',url:'#faq',target:'faq'},

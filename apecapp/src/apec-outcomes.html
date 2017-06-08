@@ -17,30 +17,30 @@
         <header>
             <div>
             <h2>The Outcomes</h2>
-   
-            <p>Congratulations for our winners, and well done for all the teams.<br/>Below are the outcomes from all participant teams.</p>
+
+            <p>Congratulations to our winners, and well done to all the teams.<br/>Below are the outcomes from each participating teams.</p>
             </div>
         </header>
         <div id="teams-list" class="container">
           <template is="dom-repeat" items={{outcomes}}>
             <div class="team">
               <template is="dom-if" if={{hasValue(item.position)}}>
-                <h5>[[item.position]]</h5> 
+                <h5>[[item.position]]</h5>
               </template>
               <template is="dom-if" if={{hasValue(item.url)}}>
-                <h4><a href="[[item.url]]">[[item.title]]</a></h4> 
+                <h4><a href="[[item.url]]">[[item.title]]</a></h4>
               </template>
               <template is="dom-if" if={{!hasValue(item.url)}}>
-                <h4>[[item.title]]</h4> 
+                <h4>[[item.title]]</h4>
               </template>
-              
+
               <h5 class="grey">[[item.country]]</h5>
               <div class="desc">
               [[item.description]]
               </div>
             </div>
           </template>
-            
+
         </div>
     </apec-shell>
   </template>
@@ -152,8 +152,8 @@
             return true;
           else
             return false;
-        }      
-      
+        }
+
     });
   </script>
 </dom-module></body></html>

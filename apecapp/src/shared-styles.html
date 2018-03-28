@@ -4,6 +4,10 @@
 </head><body><dom-module id="shared-styles">
     <template>
         <style>
+          @font-face {
+            font-family: NovecentoSans;
+            src: url("../fonts/NOVECENTOSANSWIDE-DEMIBOLD.OTF");
+          }
         	a {
 		        text-decoration: none;
 		        font-size: inherit;
@@ -35,33 +39,40 @@
 		        height: 30px;
 		      }
 		      header {
-		        background-image: url('../images/winners.jpg');
+		        background-image: url('../images/png2.jpg');
 		        backgrond-repeat: no-repeat;
 		        background-size: cover;
-		        color: white;
+		        color: black;
 		        text-align: center;
 		      }
+          header .challengeLogo {
+            background-color: rgba(255,255,255,0.5);
+            padding: 30px;
+            border-style: solid;
+            border-color: rgba(133,39,107,1);
+            border-width: 5px;
+          }
+          .challengeLogo img {
+            width: 275px;
+            height: auto;
+          }
 		      header > div{
-		        background: rgba(0, 0, 0, 0.7);
+		        background: rgba(255, 255, 255, 0.7);
 		        @apply(--layout-vertical);
 		        @apply(--layout-center-center);
 		        height: calc(100vh - 64px);
-		        padding: 0 16px;
-		      }
-		      header h2 {
-		        font-size: 56px;
-		        font-weight: 300;
-		        margin: 0;
-		        line-height: 1.5em;
-		        
+		        padding: 0px 16px;
 		      }
 		      header p {
-		        font-size: 32px;
-		        line-height: 1.8em;
-		   
+            margin: 10px;
 		      }
+          header p.subhead {
+            font-size: 32px;
+            line-height: normal;
+            font-family: NovecentoSans;
+          }
 		      header #overview{
-		        font-size: 24px;
+		        font-size: 26px;
 		        max-width: 800px;
 		      }
 		      header paper-button, section paper-button{
@@ -83,7 +94,7 @@
 		        vertical-align: bottom;
 		      }
 		      section {
-		        padding: 66px 16px;
+		        padding: 20px 16px;
 		      }
 		      .container {
 		        max-width: 800px;
@@ -96,7 +107,7 @@
 		      }
 
 		      .container > * {
-		 
+
 		      }
 		      .container img {
 		        max-width: 100%;
@@ -108,13 +119,13 @@
 		        margin: 24px 0;
 		        text-align: center;
 		        color: var(--main-color);
-		        text-transform:capitalize; 
+		        text-transform:capitalize;
+            font-family: NovecentoSans;
 		      }
 		      .container p,.container-full p {
 		        text-align: justify;
 		      }
 
-		      
 		      #partners-logo{
 		        text-align: center;
 		      }
@@ -122,12 +133,12 @@
 		        display: inline-block;
 		        margin: 16px;
 		      }
-		      
+
 		      drawer a{
 		        display: block;
 		      }
 		      footer{
-		        
+
 		        background-color: var(--main-color);
 		        color: #FFF;
 		        margin-bottom: -16px;
@@ -136,12 +147,12 @@
 		      footer .container p{
 		        text-align: center;
 		      }
-		      footer .social-media a{
-		        padding 0 10px;
-		      }
+          footer .container a{
+            padding: 0px 20px;
+          }
 
 		      h4{
-		        padding: 15px 20px 15px 45px;
+		        padding: 15px 25px;
 		        margin: 0 0 20px;
 		        position: relative;
 		        text-align: center;
@@ -178,33 +189,43 @@
 		        text-align: justify;
 		      }
 
-		       
 
-		      
+
+
 		      @media (max-width: 640px) {
 		        .container {
 		          @apply(--layout-vertical);
 		        }
 		        header #overview{
-		          font-size: 14px;
+		          font-size: 16px;
+              line-height: 1.5em;
 		        }
+            header .challengeLogo {
+              padding: 15px;
+            }
+            .challengeLogo img {
+              width: 175px;
+              height: auto;
+            }
 		        header h2 {
 		        font-size: 32px;
 		        font-weight: 100;
 		        margin: 0;
-		        line-height: 1.5em;
-		        
+
 		        }
+            h4{
+              padding: 0px;
+              margin: 0;
+            }
 		        header p {
 		          font-size: 24px;
-		          line-height: 1.8em;
-		     
 		        }
-		        header #overview{
-		          font-size: 16px;
-		        }
+            header p.subhead {
+              line-height: 1.2em;
+              font-size: 28px;
+            }
 		        header paper-button{
-		          
+              font-size: 14px
 		        }
 		        header iron-icon{
 		          padding-right: 16px;
@@ -222,7 +243,7 @@
 		          width: 100%;
 		          margin-bottom: 3em;
 		        }
-		        
+
 		      }
 
 		      [hidden] {

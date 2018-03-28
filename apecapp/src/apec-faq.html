@@ -53,33 +53,30 @@
       properties:{
         questions:{
           type:Array,
-          value:[{ 
-              q:"How long will the event in Hanoi be?",
-              a:"Selected teams from outside Hanoi need to arrive by the afternoon of 17 May 2017 and leave on 20 May 2017. Teams from Hanoi should be available from the evening of 17 May 2017 to the evening of 19 May 2017."
+          value:[{
+              q:"How long will the event in Port Moresby be?",
+              a:"Selected teams from outside Papua New Guinea need to arrive by the afternoon of 22 May 2018 and leave on 25 May 2018. Teams from Port Moresby should be available from the evening of 22 May 2018 to the evening of 24 May 2018."
             },{
-              q:"Is flight and accommodation covered?",
-              a:"Yes, we will provide return flights from your city to Hanoi and accomodation from 17-20 May 2017 (three nights)."
-            },{
-              q:"Is there any platform restriction?",
-              a:"We suggest building Android or Web apps, due to the fact that APEC economies mostly use these two platforms."
+              q:"Are flights and accommodation covered?",
+              a:"Yes, we will provide round trip tickets between your city and Port Moresby and accomodation from 22-25 May 2018 (three nights)."
             },{
               q:"Is there any technology restriction?",
-              a:"No, you can build any technology that you’re familiar with. But through a partnership with Google, winners of this event will have access to Google-provided benefits like access to mentors, product teams, or Google products."
+              a:"No, you can build any technology that you’re familiar with. However, submissions will be considered for integration with popular e-commerce platforms like Shopify."
             },{
               q:"Does my entry have to be a new app?",
               a:"Yes, you must build the app starting from the time you are confirmed as participants in this APEC App Challenge, not before. But you can build the app on top of yours or other platform."
             },{
-              q:"So it’s not a hackathon?",
-              a:"Yes, it’s not really a hackathon, it’s an app challenge. In Hanoi, we will have a “hackathon” period to finalize your app, where we provide access to mentors. But you can build your app before you come to Hanoi, starting from the moment you are confirmed as participants."
+              q:"Why is it called an 'app challenge' instead of a 'hackathon'?",
+              a:"Unlike a typical hackathon, we allow participants to start designing and building their app before coming to Port Moresby, starting from the moment you are confirmed as participants. In Port Moresby, we will have a hackathon-like overnight session with mentors on hand for you to finalize your product and prepare your pitch."
             },{
               q:"Are teams restricted to two members only?",
-              a:"You can receive help from more than two persons while you are developing the app, but only two persons from each team can attend our final hackathon. Others can support you remotely, but only these two teammates will be publicly listed as participants in the challenge or receive prize packages."
+              a:"You can receive help from more than two persons while you are developing the app, but only two persons from each team can attend our final event. Others can support you remotely, but only these two teammates will be publicly listed as participants in the challenge and/or receive prize packages."
             },{
               q:"Is this event restricted to developers and designers only?",
-              a:"If you wish, you may receive help from designers, marketers, or others while building your app. However, during the hackathon in Hanoi you will be finalizing the app, not building the idea, and so we suggest you only bring developers or designers who can actually work on finishing the app."
+              a:"If you wish, you may receive help from designers, marketers, or others while building your app. However, during the hackathon in Port Moresby you will be finalizing the app, not building the idea, and so we suggest you only bring developers or designers who can actually work on finishing the app."
             },{
               q:"Do pitches have to be in English?",
-              a:"You may make your pitch to the judges in either English or Vietnamese."
+              a:"Yes, all pitches to the judges must be made in English."
             }
           ]
         }
@@ -90,17 +87,17 @@
           question=Polymer.dom(question).parentNode;
         }
         var parentNode=Polymer.dom(question).parentNode;
-       
-        
+
+
         var answer = Polymer.dom(parentNode).querySelector('iron-collapse');
-      
- 		
+
+
         Polymer.dom(question).querySelector('iron-icon').icon = answer.opened ? 'hardware:keyboard-arrow-down'
                                           : 'hardware:keyboard-arrow-up';
         answer.toggle();
       }
-      
-      
+
+
     });
   </script>
 </dom-module></body></html>

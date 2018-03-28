@@ -30,10 +30,10 @@
         --main-color: #85276B;
         @apply(--paper-font-common-base);
       }
-      
+
     </style>
     <iron-media-query query="min-width: 600px" query-matches="{{wideLayout}}"></iron-media-query>
-    
+
 
     <app-drawer-layout force-narrow="">
       <app-drawer id="drawer">
@@ -80,7 +80,7 @@
               <div id="partners-logo" class="horizontal around-justified layout">
                   <img src="../images/apec.gif" width="200" alt="APEC">
                   <img src="../images/google.png" width="300" alt="Google">
-                  
+
               </div>
           </div>
         </section>
@@ -88,22 +88,23 @@
         <section id="contact">
           <div class="container">
               <h3>Contact</h3>
-              <p></p>
-              <p>Send us an email with any questions and feedback at <a href="mailto:yohan.totting@asiafoundation.org">yohan.totting@asiafoundation.org</a> and <a href="mailto:benjamin.lokshin@asiafoundation.org">benjamin.lokshin@asiafoundation.org</a></p>
+              <p style="text-align:center;">Questions may be sent to Ben Lokshin, Program Officer at The Asia Foundation:</p>
+              <p style="text-align:center;">benjamin dot lokshin at asiafoundation.org</p>
           </div>
         </section>
         <footer class="layout center">
           <div class="container">
           <p>
+            The Asia Foundation<br>
             465 California St., 9th Floor<br>
             San Francisco, CA 94104<br>
             (415) 982-4640
           </p>
           <p class="social-media layout-horizontal center-justified">
           <a href="https://facebook.com/asiafoundation"><social-media-icons icon="facebook" color="#FFF"></social-media-icons></a>
-            
+
               <a href="https://twitter.com/asia_foundation"><social-media-icons icon="twitter" color="#FFF"></social-media-icons></a>
-            
+
               <a href="https://github.com/asiafoundation"><social-media-icons icon="github" color="#FFF"></social-media-icons></a>
           </p>
           <p class="text-muted">© The Asia Foundation 2017</p>
@@ -124,7 +125,7 @@
             type: Array,
             reflectToAttribute:true,
             value: [
-              
+
             ],
           wideLayout: {
             type: Boolean,
@@ -149,7 +150,7 @@
       gotoSection:function(e){
         this.$$('#'+this.selected).scrollIntoView({behavior: "smooth"});
       }
-      
+
     });
   </script>
 </dom-module>

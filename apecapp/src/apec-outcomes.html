@@ -14,18 +14,15 @@
     }
     </style>
     <apec-shell menu="{{menu}}">
-        <header>
-            <div>
-            <h2>The Outcomes</h2>
-
-            <p>Congratulations to our winners, and well done to all the teams.<br/>Below are the outcomes from each participating teams.</p>
-            </div>
-        </header>
+        <div class="container">
+            <h3>The Outcomes</h3>
+            <h4 style="text-align: center;">Congratulations to our winners, and well done to all the teams! <br> Below are the outcomes from each participating team.</p>
+        </div>
         <div id="teams-list" class="container">
           <template is="dom-repeat" items={{outcomes}}>
             <div class="team">
               <template is="dom-if" if={{hasValue(item.position)}}>
-                <h5>[[item.position]]</h5>
+                <h5 style="font-weight: 700;">[[item.position]]</h5>
               </template>
               <template is="dom-if" if={{hasValue(item.url)}}>
                 <h4><a href="[[item.url]]">[[item.title]]</a></h4>
@@ -33,7 +30,9 @@
               <template is="dom-if" if={{!hasValue(item.url)}}>
                 <h4>[[item.title]]</h4>
               </template>
-
+              <div class="image">
+                <img src="[[item.image]]" />
+              </div>
               <h5 class="grey">[[item.country]]</h5>
               <div class="desc">
               [[item.description]]
@@ -51,8 +50,8 @@
         menu: {
             type: Array,
             value: [
-              {title:'About',url:'/apecapp/#about',target:'about'},
               {title:'Winners',url:'/apecapp/#winners',target:'winners'},
+              {title:'About',url:'/apecapp/#about',target:'about'},
               {title:'Challenge',url:'/apecapp/#challenge',target:'challenge'},
               {title:'How',url:'/apecapp/#how',target:'how'},
               {title:'FAQ',url:'/apecapp/#faq',target:'faq'},
@@ -65,84 +64,84 @@
             type: Array,
             value: [
               {
-                position:'1st Place',
-                title:'APEC Connect',
-                country:'Australia',
-                description:'APEC CONNECT is an online platform designed to help small businesses register a global export identity, grow their reputation as exporters, and access export-related standards and regulations, via an open digital identity registry, interoperable localized EDI standards and Blockchain-notarized transactions.',
-                image:'',
-                url:'http://apecconnect.org/'
-              },
-              {
-                position:'2nd Place',
-                title:'AirLaLa',
-                country:'Vietnam',
-                description:'AirLaLa is an online marketplace and matchmaking platform for local artisans seeking to export their products abroad. Users also receive assistance from the platform to comply with standards and regulations.',
-                image:'',
-                url:'https://beta.airlala.com'
-              },
-              {
-                position:'3rd Place',
-                title:'Connect',
-                country:'Malaysia',
-                description:'Connect is a mobile marketplace that matches users - especially those with limited internet experience - with buyers or suppliers outside of their home markets of the user-specified good, and provides users with relevant market intelligence about that good.',
-                image:'',
-                url:'https://play.google.com/store/apps/details?id=com.snappymob.connect'
-              },
-              {
-                title:'ITTN-Matchgeter',
-                country:'China',
-                description:'ITTN-Matchgeter is a mobile app that helps SMEs compare the import and export regulations of their commodity within their home market and target external market. When the two regulatory environments align, the commodity is considered a match for import/export, and the user is then allowed to list its product on the app and gain access to tailored marketing resources.',
-                image:'',
+                position:'🥇 1st Place',
+                title:'Biluminous',
+                country:'Crystal Kewe & Jonathan Kewe (Papua New Guinea)',
+                description:'',
+                image:'./images/png-biluminous.png',
                 url:''
               },
               {
-                title:'Galleon',
-                country:'Indonesia',
-                description:'Galleon is a web-based e-commerce platform that lists buyers’ product specifications, rather than sellers’ offerings. By inverting the typical sales model, Galleon generates market insight on consumer preferences for distributors and suppliers upstream, and enables transparency and competitive pricing that can be passed through the length of the value chain.',
-                image:'',
+                position:'🥈 2nd Place',
+                title:'Bilum Original',
+                country:'Venus Izadi & Kelly Benson (Australia)',
+                description:'',
+                image:'./images/au-bilumoriginal.png',
                 url:''
               },
               {
-                title:'Wundersell',
-                country:'New Zealand',
-                description:'Wundersell is a mobile platform that provides users a direct channel of communication with potential buyers and sellers via real-time message translation, access to market intelligence, and an integrated payments processing service. The platform is based on the Facebook Messenger Chat Bot.',
-                image:'',
+                position:'🥉 3rd Place',
+                title:'Unicraft',
+                country:'Ngô Minh Quốc Hưng & Nguyễn Đức Hiệp (Viet Nam)',
+                description:'',
+                image:'./images/vn-unicraft.png',
                 url:''
               },
               {
-                title:'Producteve ',
-                country:'Philippines',
-                description:'Producteve is a mobile app that directs users unfamiliar with new export markets to relevant market demand data and research and resource persons. The app also provides automatic, real-time translation of chats for the purpose of export assistance.',
-                image:'',
+                title:'Tradeeler',
+                country:'Mikel Carozzi & Christian Ramírez (Chile)',
+                description:'',
+                image:'./images/cl-tradeeler.png',
                 url:''
               },
               {
-                title:'Dispatcher',
-                country:'Singapore',
-                description:'Dispatcher is an online matchmaker between SMEs looking to export their products overseas and freight forwarders providing shipping and logistics services. Once the freight forwarder has been selected, the app provides real-time tracking of the shipment as it makes its way to its destination.',
-                image:'',
+                title:'SnapBilum',
+                country:'Muhammad Mustadi & Cita Audia Ahlunaza (Indonesia)',
+                description:'',
+                image:'./images/id-snapbilum.png',
+                url:'https://snapbilum.now.sh/'
+              },
+              {
+                title:'1TOKx',
+                country:'Juye Kim & Changbeom Choi (Republic of Korea)',
+                description:'',
+                image:'./images/kr-1tokx.png',
+                url:'https://github.com/PNG-LivingLab/Wantok'
+              },
+              {
+                title:'Bilum AR',
+                country:'Sriram Ramasamy & Muhammad Bin Lokman (Malaysia)',
+                description:'',
+                image:'./images/my-bilumar.png',
                 url:''
               },
               {
-                title:'BExport',
-                country:'Vietnam',
-                description:'BExport is a web-based platform that connects MSMEs interested in expanding to new markets with industry experts that provide export consultation services specific to the businesses’ products and target markets.',
-                image:'',
+                title:'BILUM App',
+                country:'Austin Polin & Alois Napitalai (Papua New Guinea)',
+                description:'',
+                image:'./images/png-bilumapp.png',
+                url:'https://zen-poitras-b99161.netlify.com/'
+              },
+              {
+                title:'Bilum Stori',
+                country:'David Chen & Willie Meck (Papua New Guinea)',
+                description:'',
+                image:'./images/png-bilumstori.png',
                 url:''
               },
               {
-                title:'Export Friend',
-                country:'Thailand',
-                description:'Export Friend is a platform that employs artificial intelligence and machine learning to provide small businesses with market intelligence on products and prices globally. Once a target market has been identified, Export Friend provides online insurance services as well as suggestions for trusted logistics providers for the export product. The platform delivers information through Facebook Messenger combined with other web applications to process transactions.',
-                image:'',
-                url:'http://www.exportfriend.ml/'
+                title:'Bilum Mamas',
+                country:'Gabriel Billones & Mark Colentava (Philippines)',
+                description:'',
+                image:'./images/ph-bilummamas.png',
+                url:''
               },
               {
-                title:'vLoc',
-                country:'Vietnam',
-                description:'Vloc is a web-based global warehouse locator that facilitates MSMEs’ ability to manage their supply chain. The vloc can reduce the cost of designing distribution and supply chain that only big corporation can afford.',
-                image:'',
-                url:'http://vloc.abivin.com:3000'
+                title:'Bilum Bot',
+                country:'Issaret Prachitmutita & Nichcha Jobhimmawet (Thailand)',
+                description:'',
+                image:'./images/th-bilumbot.png',
+                url:'https://bilum.webcoding.in.th/wordpress/'
               },
             ]
         },

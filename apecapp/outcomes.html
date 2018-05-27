@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>Outcomes - APEC App Challenge</title>
+    <meta name="description" content="APEC App Challenge was created innovative apps and online platforms that have the potential to help MSMEs in APEC economies leverage the internet to begin exporting to foreign markets.">
+    <meta name="theme-color" content="#27a8d8">
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <style type="text/css">
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background-color: #fff;
+        line-height: 2em;
+      }
+    </style>
+    <link rel="import" href="src/apec-outcomes.html">
+  </head>
+  <body>
+    <noscript>This website need Javascript to be enabled to make it works</noscript>
+    <apec-outcomes></apec-outcomes>
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js');
+      }
+    </script>
+  </body>
+</html>
